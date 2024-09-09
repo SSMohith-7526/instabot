@@ -1,0 +1,28 @@
+pip install instabot
+pip install bot
+from instabot import Bot
+
+# Initialize the bot
+bot = Bot()
+
+# Log in to Instagram
+bot.login(username="//your username//", password="//your password")
+
+# Upload a photo with a caption
+bot.upload_photo("in.jpg", caption="Hi, this is a hacker")
+
+# Follow a user
+bot.follow("mahi7781")
+
+# Send a message to a user
+bot.send_message("Hi, I am from kkk", ["mahi7781"])
+
+# Get followers of a specific user
+followers = bot.get_user_followers("//any id//")
+
+# Iterate through the followers and print their information
+for follower in followers:
+    print(bot.get_user_info(follower))
+
+# Unfollow everyone
+bot.unfollow_everyone()
